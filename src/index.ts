@@ -23,6 +23,7 @@ export function createClient(
   clientConfig: AthenaClientConfig,
   awsConfig: AwsConfig,
 ) {
+  console.log("node-athena Bigabid's fork")
   if (
     clientConfig === undefined ||
     clientConfig.bucketUri === undefined ||

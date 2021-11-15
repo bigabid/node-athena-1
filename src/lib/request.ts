@@ -187,9 +187,11 @@ export class AthenaRequest {
 }
 
 function isRetryException(err: AWSError) {
+  console.error(err)
   return (
     err.code === 'ThrottlingException' ||
     err.code === 'TooManyRequestsException' ||
+    err.code === 'INTERNAL_ERROR_QUERY_ENGINE' ||
     err.message === 'Query exhausted resources at this scale factor'
   )
 }
